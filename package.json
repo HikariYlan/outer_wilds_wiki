@@ -1,0 +1,35 @@
+{
+  "name": "outer_wilds_wiki",
+  "version": "1.0.0",
+  "description": "Community-based french wiki for the video game \"Outer Wilds\", developed with Typescript & the node.js framework Express ",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tsc-watch --watch --onSuccess \"npm run start\"",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HikariYlan/outer_wilds_wiki.git"
+  },
+  "keywords": [
+    "Outer Wilds",
+    "Wiki",
+    "Video games"
+  ],
+  "author": "Hikari/Ylan",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HikariYlan/outer_wilds_wiki/issues"
+  },
+  "homepage": "https://github.com/HikariYlan/outer_wilds_wiki#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.1",
+    "tsc-watch": "^7.1.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
