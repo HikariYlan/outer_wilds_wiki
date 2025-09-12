@@ -32,6 +32,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@kitajs/html",
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
