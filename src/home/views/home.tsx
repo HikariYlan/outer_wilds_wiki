@@ -26,7 +26,7 @@ export function HomeView(props: { version: string }): JSX.Element {
                     <img src="/images/main_logo.png" alt="logo principal"/>
                     <img src="/images/main_logo_dlc.png" alt="logo DLC"/>
                 </div>
-                <section id="separator_top" class="hidden transition">
+                <section id="separator_top" class="hidden transition separator">
                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 </section>
                 <div id="buttons" class="hidden transition">
@@ -35,7 +35,7 @@ export function HomeView(props: { version: string }): JSX.Element {
                     <button>CRÉDITS</button>
                     <button>CHANGER DE PROFIL</button>
                 </div>
-                <section id="separator_bottom" class="hidden transition">
+                <section id="separator_bottom" class="hidden transition separator">
                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 </section>
                 <p id="version" class="hidden transition">v{props.version}</p>

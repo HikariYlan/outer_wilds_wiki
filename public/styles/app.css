@@ -81,17 +81,17 @@ html, body {
     margin-bottom: 1.5em;
 }
 
-#separator_top {
+.separator {
     color: rgb(var(--ow_separator));
     font-size: 1.5em;
     margin-left: 5vw;
+}
+
+#separator_top {
     margin-bottom: 3vw;
 }
 
 #separator_bottom {
-    color: rgb(var(--ow_separator));
-    font-size: 1.5em;
-    margin-left: 5vw;
     margin-top: 3vw;
 }
 
@@ -138,17 +138,15 @@ p {
         margin-bottom: 1.5em;
     }
 
-    #separator_top {
-        color: rgb(var(--ow_orange));
-        font-size: 1.5em;
+    .separator {
         margin-left: 10vw;
+    }
+
+    #separator_top {
         margin-bottom: 5vw;
     }
 
     #separator_bottom {
-        color: rgb(var(--ow_orange));
-        font-size: 1.5em;
-        margin-left: 10vw;
         margin-top: 5vw;
     }
 
