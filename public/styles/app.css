@@ -88,6 +88,7 @@ section {
 p {
     margin: 1.5em;
     color: rgb(var(--ow_orange));
+    font-size: 1.5em;
 }
 
 @media screen and (display-mode: fullscreen) {
@@ -117,5 +118,10 @@ p {
         margin-bottom: 1.5em;
         text-align: center;
         width: 500px;
+    }
+
+    p {
+        margin-left: 6vw;
+        color: rgb(var(--ow_orange));
     }
 }
