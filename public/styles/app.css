@@ -8,6 +8,9 @@ html, body {
     overflow-y: hidden;
     --ow_orange: 255, 124, 37;
     --ow_orange_hover: 252, 220, 192;
+    --ow_dialog_background: 13, 13, 13;
+    --ow_white: 252, 220, 196;
+    --ow_separator: 55, 55, 55;
 }
 
 .hidden {
@@ -30,25 +33,34 @@ html, body {
     z-index: -1;
 }
 
-#dialog {
-    background: rgb(0, 0, 0);
+.dialog {
+    background: rgb(var(--ow_dialog_background));
     display: flex;
     flex-direction: column;
     color: rgb(var(--ow_orange));
-    border: solid 2px;
-    border-radius: 10px;
+    border: solid 4px rgb(var(--ow_white));
     align-items: center;
 }
 
-#close {
+.close_dialog {
     font-family: inherit;
     font-size: 2em;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: transparent;
-    width: 200px;
-    border-radius: 10px;
+    background: rgb(var(--ow_dialog_background));
+    color: rgb(var(--ow_orange));
+    border: solid 4px rgb(var(--ow_orange));
+    width: 300px;
     cursor: pointer;
+    padding: 5px;
+}
+
+.close_dialog:hover {
+    background: rgb(var(--ow_white));
+    color: rgb(var(--ow_dialog_background));
+    border: solid 4px rgb(var(--ow_white));
+}
+
+.close_dialog:focus {
+    outline: none;
 }
 
 .transition {
@@ -70,14 +82,14 @@ html, body {
 }
 
 #separator_top {
-    color: rgb(var(--ow_orange));
+    color: rgb(var(--ow_separator));
     font-size: 1.5em;
     margin-left: 5vw;
     margin-bottom: 3vw;
 }
 
 #separator_bottom {
-    color: rgb(var(--ow_orange));
+    color: rgb(var(--ow_separator));
     font-size: 1.5em;
     margin-left: 5vw;
     margin-top: 3vw;
