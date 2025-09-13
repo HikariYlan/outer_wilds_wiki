@@ -1,0 +1,121 @@
+html, body {
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    --ow_orange: 255, 124, 37;
+    --ow_orange_hover: 252, 220, 192;
+}
+
+.hidden {
+    display: none; /* empêche de voir le contenu avant */
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.transition {
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.transition_long {
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.transition_long.visible {
+    opacity: 1;
+}
+
+.transition.visible {
+    opacity: 1;
+}
+
+#logos {
+    margin: 5vw;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 2em;
+    margin-bottom: 1.5em;
+}
+
+section {
+    color: rgb(var(--ow_orange));
+    font-size: 1.5em;
+    margin-left: 5vw;
+}
+
+#buttons {
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 5vw;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    width: 500px;
+}
+
+#buttons > button {
+    font-family: inherit;
+    background: transparent;
+    color: rgb(var(--ow_orange));
+    border: none;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#buttons > button:hover {
+    color: rgb(var(--ow_orange_hover));
+    cursor: pointer;
+}
+
+p {
+    margin: 1.5em;
+    color: rgb(var(--ow_orange));
+}
+
+@media screen and (display-mode: fullscreen) {
+    #logos {
+        margin: 10vw;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        gap: 2em;
+        margin-top: 7vw;
+        margin-bottom: 1.5em;
+    }
+
+    section {
+        color: rgb(var(--ow_orange));
+        font-size: 1.5em;
+        margin-left: 10vw;
+    }
+
+    #buttons {
+        font-family: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 10vw;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        text-align: center;
+        width: 500px;
+    }
+}
