@@ -21,16 +21,16 @@ export function HomeView(props: { version: string }): JSX.Element {
                     <img src="/images/main_logo.png" alt="logo principal"/>
                     <img src="/images/main_logo_dlc.png" alt="logo DLC"/>
                 </div>
-                <section id="separator" class="hidden transition">
+                <section id="separator_top" class="hidden transition">
                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 </section>
-                <div id="buttons" class="hidden transition_long">
+                <div id="buttons" class="hidden transition">
                     <button>NOUVELLE EXPÉDITION</button>
                     <button>OPTIONS</button>
                     <button>CRÉDITS</button>
                     <button>CHANGER DE PROFIL</button>
                 </div>
-                <section id="separator2" class="hidden transition">
+                <section id="separator_bottom" class="hidden transition">
                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 </section>
                 <p id="version" class="hidden transition">v{props.version}</p>

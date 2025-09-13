@@ -1,7 +1,7 @@
 const video = document.getElementById('background-video');
 const logos = document.getElementById('logos');
-const sep = document.getElementById('separator');
-const sep2 = document.getElementById('separator2');
+const sep = document.getElementById('separator_top');
+const sep2 = document.getElementById('separator_bottom');
 const buttons = document.getElementById('buttons');
 const version = document.getElementById('version');
 

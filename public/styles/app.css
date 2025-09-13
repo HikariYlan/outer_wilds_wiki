@@ -31,15 +31,6 @@ html, body {
     transition: opacity 3s ease;
 }
 
-.transition_long {
-    opacity: 0;
-    transition: opacity 3s ease;
-}
-
-.transition_long.visible {
-    opacity: 1;
-}
-
 .transition.visible {
     opacity: 1;
 }
@@ -53,10 +44,18 @@ html, body {
     margin-bottom: 1.5em;
 }
 
-section {
+#separator_top {
     color: rgb(var(--ow_orange));
     font-size: 1.5em;
     margin-left: 5vw;
+    margin-bottom: 3vw;
+}
+
+#separator_bottom {
+    color: rgb(var(--ow_orange));
+    font-size: 1.5em;
+    margin-left: 5vw;
+    margin-top: 3vw;
 }
 
 #buttons {
@@ -102,10 +101,18 @@ p {
         margin-bottom: 1.5em;
     }
 
-    section {
+    #separator_top {
         color: rgb(var(--ow_orange));
         font-size: 1.5em;
         margin-left: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    #separator_bottom {
+        color: rgb(var(--ow_orange));
+        font-size: 1.5em;
+        margin-left: 10vw;
+        margin-top: 5vw;
     }
 
     #buttons {
