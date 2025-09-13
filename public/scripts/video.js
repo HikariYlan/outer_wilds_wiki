@@ -1,7 +1,8 @@
+const body = document.querySelector('body');
 const video = document.getElementById('background-video');
 const logos = document.getElementById('logos');
-const sep = document.getElementById('separator_top');
-const sep2 = document.getElementById('separator_bottom');
+const separator_top = document.getElementById('separator_top');
+const separator_bottom = document.getElementById('separator_bottom');
 const buttons = document.getElementById('buttons');
 const version = document.getElementById('version');
 const closeButton = document.getElementById("close");
@@ -12,18 +13,20 @@ dialog.showModal();
 closeButton.addEventListener("click", () => {
     dialog.close();
     dialog.classList.add('hidden');
+    body.classList.add('nocursor');
     video.play().then(() => {
         console.log("video lancée");
     })
 });
 
 video.addEventListener('ended', () => {
+    body.classList.remove('nocursor');
     logos.classList.remove('hidden');
     setTimeout(() => logos.classList.add('visible'), 50);
-    sep.classList.remove('hidden');
-    setTimeout(() => sep.classList.add('visible'), 50);
-    sep2.classList.remove('hidden');
-    setTimeout(() => sep2.classList.add('visible'), 2000);
+    separator_top.classList.remove('hidden');
+    setTimeout(() => separator_top.classList.add('visible'), 50);
+    separator_bottom.classList.remove('hidden');
+    setTimeout(() => separator_bottom.classList.add('visible'), 2000);
     buttons.classList.remove('hidden');
     setTimeout(() => buttons.classList.add('visible'), 1500);
     version.classList.remove('hidden');
@@ -32,12 +35,13 @@ video.addEventListener('ended', () => {
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "e" || event.key === "E") {
+        body.classList.remove('nocursor');
         logos.classList.remove('hidden');
         setTimeout(() => logos.classList.add('visible'), 50);
-        sep.classList.remove('hidden');
-        setTimeout(() => sep.classList.add('visible'), 50);
-        sep2.classList.remove('hidden');
-        setTimeout(() => sep2.classList.add('visible'), 2000);
+        separator_top.classList.remove('hidden');
+        setTimeout(() => separator_top.classList.add('visible'), 50);
+        separator_bottom.classList.remove('hidden');
+        setTimeout(() => separator_bottom.classList.add('visible'), 2000);
         buttons.classList.remove('hidden');
         setTimeout(() => buttons.classList.add('visible'), 1500);
         version.classList.remove('hidden');
