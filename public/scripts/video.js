@@ -11,6 +11,7 @@ dialog.showModal();
 
 closeButton.addEventListener("click", () => {
     dialog.close();
+    dialog.classList.add('hidden');
     video.play().then(() => {
         console.log("video lancée");
     })
