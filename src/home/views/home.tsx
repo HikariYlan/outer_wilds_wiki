@@ -14,7 +14,12 @@ export function HomeView(props: { version: string }): JSX.Element {
             </head>
             <body class="josefin-sans-font">
             <div id="main">
-                <video autoplay={true} muted={true} id="background-video">
+                <dialog id="dialog">
+                    <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
+                        F11)</h1>
+                    <button id="close">J'ai compris !</button>
+                </dialog>
+                <video muted={true} id="background-video">
                     <source src="/videos/outer_wilds_menu_vid.mp4"/>
                 </video>
                 <div id="logos" class="hidden transition">

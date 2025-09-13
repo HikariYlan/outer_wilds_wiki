@@ -4,7 +4,17 @@ const sep = document.getElementById('separator_top');
 const sep2 = document.getElementById('separator_bottom');
 const buttons = document.getElementById('buttons');
 const version = document.getElementById('version');
+const closeButton = document.getElementById("close");
+const dialog = document.querySelector("dialog");
 
+dialog.showModal();
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+    video.play().then(() => {
+        console.log("video lancée");
+    })
+});
 
 video.addEventListener('ended', () => {
     logos.classList.remove('hidden');
@@ -12,11 +22,11 @@ video.addEventListener('ended', () => {
     sep.classList.remove('hidden');
     setTimeout(() => sep.classList.add('visible'), 50);
     sep2.classList.remove('hidden');
-    setTimeout(() => sep2.classList.add('visible'), 50);
+    setTimeout(() => sep2.classList.add('visible'), 2000);
     buttons.classList.remove('hidden');
-    setTimeout(() => buttons.classList.add('visible'), 2000);
+    setTimeout(() => buttons.classList.add('visible'), 1500);
     version.classList.remove('hidden');
-    setTimeout(() => version.classList.add('visible'), 50);
+    setTimeout(() => version.classList.add('visible'), 2000);
 });
 
 document.addEventListener("keydown", (event) => {
@@ -26,10 +36,10 @@ document.addEventListener("keydown", (event) => {
         sep.classList.remove('hidden');
         setTimeout(() => sep.classList.add('visible'), 50);
         sep2.classList.remove('hidden');
-        setTimeout(() => sep2.classList.add('visible'), 50);
+        setTimeout(() => sep2.classList.add('visible'), 2000);
         buttons.classList.remove('hidden');
-        setTimeout(() => buttons.classList.add('visible'), 2000);
+        setTimeout(() => buttons.classList.add('visible'), 1500);
         version.classList.remove('hidden');
-        setTimeout(() => version.classList.add('visible'), 50);
+        setTimeout(() => version.classList.add('visible'), 2000);
     }
 });
