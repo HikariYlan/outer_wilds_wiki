@@ -30,6 +30,7 @@ In order to run this project in your own PC, you need to have the list below ins
 Open a terminal in the place of your choice, then copy-paste the series of commands below:
 ```shell
 git clone https://github.com/HikariYlan/outer_wilds_wiki.git &&
+cd outer_wilds_wiki/ &&
 npm install &&
 npm run watch
 ```
@@ -37,5 +38,6 @@ npm run watch
 Here is an explanation step by step:
 
 - `git clone`: fetch the entire project from the source (here my GitHub repository) to download it on you machine
+- `cd outer_wilds_wiki/`: place the terminal in the newly created folder
 - `npm install`: install all dependencies listed in the file called "package.json"
 - `npm run watch`: starts the server only if no errors has been found
