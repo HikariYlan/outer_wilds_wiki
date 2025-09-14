@@ -1,6 +1,7 @@
 export function HomeView(props: { version: string }): JSX.Element {
 
-    return (<>
+    return (
+        <>
         {'<!DOCTYPE html>'}
             <head>
                 <title>Outer Wilds Wiki</title>
@@ -14,6 +15,7 @@ export function HomeView(props: { version: string }): JSX.Element {
             </head>
             <body class="josefin-sans-font">
             <div id="main">
+                <div id="dialogBox" />
                 <dialog id="dialog" class="dialog">
                     <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
                         F11)</h1>
@@ -32,7 +34,7 @@ export function HomeView(props: { version: string }): JSX.Element {
                 <div id="buttons" class="hidden transition">
                     <button>NOUVELLE EXPÉDITION</button>
                     <button>OPTIONS</button>
-                    <button>CRÉDITS</button>
+                    <button hx-get="/credits" hx-target="#dialogBox">CRÉDITS</button>
                     <button>CHANGER DE PROFIL</button>
                 </div>
                 <section id="separator_bottom" class="hidden transition separator">
@@ -43,5 +45,6 @@ export function HomeView(props: { version: string }): JSX.Element {
             <script src="/scripts/video.js" />
             <script src="/scripts/htmx.min.js" />
             </body>
-    </>);
+        </>
+    );
 }
