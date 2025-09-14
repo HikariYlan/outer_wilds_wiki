@@ -40,7 +40,8 @@ export function HomeView(props: { version: string }): JSX.Element {
                 </section>
                 <p id="version" class="hidden transition">v{props.version}</p>
             </div>
-            <script src="/scripts/video.js"></script>
+            <script src="/scripts/video.js" />
+            <script src="/scripts/htmx.min.js" />
             </body>
     </>);
 }
