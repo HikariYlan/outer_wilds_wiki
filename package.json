@@ -1,6 +1,6 @@
 {
   "name": "outer_wilds_wiki",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Community-based french wiki for the video game \"Outer Wilds\", developed with Typescript & the node.js framework Express ",
   "main": "index.js",
   "scripts": {
