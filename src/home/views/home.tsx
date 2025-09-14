@@ -15,7 +15,7 @@ export function HomeView(props: { version: string }): JSX.Element {
             </head>
             <body class="josefin-sans-font">
             <div id="main">
-                <div id="dialogBox" />
+                <div id="dialogBox"/>
                 <dialog id="dialog" class="dialog">
                     <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
                         F11)</h1>
@@ -24,7 +24,10 @@ export function HomeView(props: { version: string }): JSX.Element {
                 <video muted={true} id="background-video">
                     <source src="/videos/outer_wilds_menu_vid.mp4"/>
                 </video>
-                <audio id="buttonAudio" src="/sounds/button.wav" />
+                <audio loop={true}>
+                    <source src="/sounds/musics/main_menu.m4a"/>
+                </audio>
+                <audio id="buttonAudio" src="/sounds/button.wav"/>
                 <div id="logos" class="hidden transition">
                     <img src="/images/main_logo.png" alt="logo principal"/>
                     <img src="/images/main_logo_dlc.png" alt="logo DLC"/>
@@ -43,8 +46,8 @@ export function HomeView(props: { version: string }): JSX.Element {
                 </section>
                 <p id="version" class="hidden transition">v{props.version}</p>
             </div>
-            <script src="/scripts/video.js" />
-            <script src="/scripts/htmx.min.js" />
+            <script src="/scripts/video.js"/>
+            <script src="/scripts/htmx.min.js"/>
             <script src="/scripts/app.js" />
             </body>
         </>
