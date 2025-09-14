@@ -6,6 +6,7 @@ export function CreditsView(): JSX.Element {
                 <button id="closeButton" class="close_dialog">Continuer</button>
             </dialog>
             <script src="/scripts/dialog.js"/>
+            <script src="/scripts/app.js" />
         </>
     );
 }

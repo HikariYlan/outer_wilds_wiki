@@ -1,9 +1,10 @@
 const body = document.querySelector('body');
-const video = document.getElementById('background-video');
+const video = document.querySelector('video');
+const music = document.querySelector("audio");
 const logos = document.getElementById('logos');
 const separator_top = document.getElementById('separator_top');
 const separator_bottom = document.getElementById('separator_bottom');
-const buttons = document.getElementById('buttons');
+const buttonsBox = document.getElementById('buttons');
 const version = document.getElementById('version');
 const closeButton = document.getElementById("close");
 const dialog = document.querySelector("dialog");
@@ -15,7 +16,10 @@ closeButton.addEventListener("click", () => {
     dialog.classList.add('hidden');
     body.classList.add('nocursor');
     video.play().then(() => {
-        console.log("video lancée");
+        console.log("[OUTER WILDS WIKI] Vidéo lancée");
+    });
+    music.play().then(() => {
+        console.log("[OUTER WILDS WIKI] Musique lancée");
     })
 });
 
@@ -27,8 +31,8 @@ function transition() {
     setTimeout(() => separator_top.classList.add('visible'), 50);
     separator_bottom.classList.remove('hidden');
     setTimeout(() => separator_bottom.classList.add('visible'), 2000);
-    buttons.classList.remove('hidden');
-    setTimeout(() => buttons.classList.add('visible'), 1500);
+    buttonsBox.classList.remove('hidden');
+    setTimeout(() => buttonsBox.classList.add('visible'), 1500);
     version.classList.remove('hidden');
     setTimeout(() => version.classList.add('visible'), 2000);
 }
