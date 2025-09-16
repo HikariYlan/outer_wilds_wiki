@@ -11,6 +11,7 @@ html, body {
     --ow_dialog_background: 13, 13, 13;
     --ow_white: 252, 220, 196;
     --ow_separator: 55, 55, 55;
+    --ow_turquoise: 18, 200, 182;
 }
 
 .hidden {
@@ -19,6 +20,23 @@ html, body {
 
 .nocursor {
     cursor: none;
+}
+
+.hightlight {
+    color: rgb(var(--ow_orange));
+}
+
+p {
+    color: rgb(var(--ow_white));
+}
+
+a, a:visited {
+    color: rgb(var(--ow_turquoise));
+}
+
+a:hover {
+    background: rgb(var(--ow_white));
+    color: rgb(var(--ow_dialog_background));
 }
 
 #background-video {
@@ -125,6 +143,12 @@ html, body {
     margin-left: 1vw;
     color: rgb(var(--ow_orange));
     font-size: 1.3em;
+}
+
+#credits {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
 }
 
 @media screen and (display-mode: fullscreen) {
