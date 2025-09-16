@@ -6,7 +6,7 @@ game "Outer Wilds":
 planets, species, endings, achievements, etc.
 
 ## A personal note from the developer
-This is the 5th (hopefully the last) iteration of that project.
+This is the 6th (hopefully the last) iteration of that project.
 It started as my school end-of-the-year project, in 2022, where we had to develop a website around the theme of our choice. 
 Big fan of the game since 2021, I obviously proposed *Outer Wilds* to my duo who accepted, and the project was born.
 Starting with very basics knowledge, the website was developed with HTML, CSS & some Javascript.
