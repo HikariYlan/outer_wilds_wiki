@@ -9,11 +9,8 @@ const version = document.getElementById('version');
 const closeButton = document.getElementById("close");
 const dialog = document.querySelector("dialog");
 
-dialog.showModal();
-
 closeButton.addEventListener("click", () => {
-    dialog.close();
-    dialog.classList.add('hidden');
+    dialog.remove();
     body.classList.add('nocursor');
     video.play().then(() => {
         console.log("[OUTER WILDS WIKI] Vidéo lancée");

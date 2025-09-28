@@ -14,6 +14,13 @@ html, body {
     --ow_turquoise: 18, 200, 182;
 }
 
+#main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .hidden {
     display: none !important;
 }

@@ -1,7 +1,7 @@
 export function CreditsView(): JSX.Element {
     return (
         <>
-            <dialog class="dialog hidden">
+            <dialog class="dialog" open>
                 <h1>Crédits</h1>
                 <div id="credits">
                     <div>
@@ -24,10 +24,9 @@ export function CreditsView(): JSX.Element {
                         </p>
                     </div>
                 </div>
-                <button id="closeButton" class="close_dialog">Continuer</button>
+                <button id="closeButton" class="close_dialog" onclick="document.querySelector('dialog').remove()">Continuer</button>
+                <script src="/scripts/app.js"/>
             </dialog>
-            <script src="/scripts/dialog.js"/>
-            <script src="/scripts/app.js" />
         </>
     );
 }

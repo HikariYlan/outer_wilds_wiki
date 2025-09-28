@@ -15,11 +15,14 @@ export function HomeView(props: { version: string }): JSX.Element {
             </head>
             <body class="josefin-sans-font">
             <div id="main">
-                <div id="dialogBox"/>
-                <dialog id="dialog" class="dialog">
+                <dialog id="dialog" class="dialog" open>
                     <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
                         F11)</h1>
-                    <button id="close" class="close_dialog" autofocus={false}>Continuer</button>
+                    <button
+                        id="close"
+                        class="close_dialog"
+                        onclick="document.querySelector('dialog').remove()"
+                    >Continuer</button>
                 </dialog>
                 <video muted={true} id="background-video">
                     <source src="/videos/outer_wilds_menu_vid.mp4"/>
@@ -38,7 +41,12 @@ export function HomeView(props: { version: string }): JSX.Element {
                 <div id="buttons" class="hidden transition">
                     <button>NOUVELLE EXPÉDITION</button>
                     <button>OPTIONS</button>
-                    <button hx-get="/credits" hx-target="#dialogBox">CRÉDITS</button>
+                    <button
+                        hx-get="/credits"
+                        hx-target="#main"
+                        hx-swap="afterbegin"
+                        onclick="document.querySelector('dialog').remove()"
+                    >CRÉDITS</button>
                     <button>CHANGER DE PROFIL</button>
                 </div>
                 <section id="separator_bottom" class="hidden transition separator">
