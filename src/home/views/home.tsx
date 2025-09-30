@@ -26,8 +26,7 @@ export function HomeView(props: { version: string }): JSX.Element {
                     </button>
                 </dialog>
                 <video muted={true}>
-                    <source src="/videos/outer_wilds_menu_vid.mp4" id="vSource"/>
-                    <source src="/videos/outer_wilds_menu_vid_skip.mp4" id="vSourceSkip"/>
+                    <source src="/videos/outer_wilds_menu_vid.mp4" />
                 </video>
                 <audio loop={true} id="background-audio" src="/sounds/musics/main_menu.m4a" />
                 <audio id="buttonAudio" src="/sounds/button.wav"/>

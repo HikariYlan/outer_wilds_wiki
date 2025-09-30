@@ -1,7 +1,5 @@
 const body = document.querySelector('body');
 const video = document.querySelector('video');
-const vSource = document.querySelector('source[id="vSource"]');
-const vSourceSkip = document.querySelector('source[id="vSourceSkip"]');
 const audio = document.querySelector('audio[id="background-audio"]');
 const logos = document.getElementById('logos');
 const separator_top = document.getElementById('separator_top');
@@ -16,14 +14,10 @@ if (localStorage.getItem('skipIntro') === null) {
 }
 
 if (localStorage.getItem('skipIntro') === 'true') {
-    vSource.remove();
+    video.currentTime = 24.5;
     audio.currentTime = 24.5;
 
-} else {
-    vSourceSkip.remove();
 }
-
-video.load();
 
 closeButton.addEventListener("click", () => {
     dialog.remove();
