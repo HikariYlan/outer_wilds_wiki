@@ -22,14 +22,11 @@ export function HomeView(props: { version: string }): JSX.Element {
                         id="close"
                         class="close_dialog"
                         onclick="document.querySelector('dialog').remove()"
-                    >Continuer</button>
+                    >Continuer
+                    </button>
                 </dialog>
-                <video muted={true} id="background-video">
-                    <source src="/videos/outer_wilds_menu_vid.mp4"/>
-                </video>
-                <audio loop={true}>
-                    <source src="/sounds/musics/main_menu.m4a"/>
-                </audio>
+                <video muted={true} id="background-video" />
+                <audio loop={true} id="background-audio" />
                 <audio id="buttonAudio" src="/sounds/button.wav"/>
                 <div id="logos" class="hidden transition">
                     <img src="/images/main_logo.png" alt="logo principal"/>
@@ -40,13 +37,19 @@ export function HomeView(props: { version: string }): JSX.Element {
                 </section>
                 <div id="buttons" class="hidden transition">
                     <button>NOUVELLE EXPÉDITION</button>
-                    <button>OPTIONS</button>
+                    <button
+                        hx-get="/options"
+                        hx-target="#main"
+                        hx-swap="afterbegin"
+                        onclick="document.querySelector('dialog').remove()">OPTIONS
+                    </button>
                     <button
                         hx-get="/credits"
                         hx-target="#main"
                         hx-swap="afterbegin"
                         onclick="document.querySelector('dialog').remove()"
-                    >CRÉDITS</button>
+                    >CRÉDITS
+                    </button>
                     <button>CHANGER DE PROFIL</button>
                 </div>
                 <section id="separator_bottom" class="hidden transition separator">
@@ -56,7 +59,7 @@ export function HomeView(props: { version: string }): JSX.Element {
             </div>
             <script src="/scripts/video.js"/>
             <script src="/scripts/htmx.min.js"/>
-            <script src="/scripts/app.js" />
+            <script src="/scripts/app.js"/>
             </body>
         </>
     );

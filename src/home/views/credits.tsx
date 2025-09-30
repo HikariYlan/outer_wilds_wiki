@@ -24,7 +24,10 @@ export function CreditsView(): JSX.Element {
                         </p>
                     </div>
                 </div>
-                <button id="closeButton" class="close_dialog" onclick="document.querySelector('dialog').remove()">Continuer</button>
+                <button id="closeButton"
+                        class="close_dialog"
+                        onclick="document.querySelector('dialog').remove()">Continuer
+                </button>
                 <script src="/scripts/app.js"/>
             </dialog>
         </>

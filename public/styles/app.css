@@ -46,7 +46,7 @@ a:hover {
     color: rgb(var(--ow_dialog_background));
 }
 
-#background-video {
+#background-video, #background-video-skip {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
