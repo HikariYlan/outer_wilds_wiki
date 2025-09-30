@@ -17,3 +17,23 @@ labels.forEach(lbl => {
         labelAudio.play();
     });
 });
+
+function muteAudio() {
+    document.querySelectorAll('audio').forEach(media => {
+        media.muted = true;
+    });
+}
+
+function unmuteAudio() {
+    document.querySelectorAll('audio').forEach(media => {
+        media.muted = false;
+    });
+}
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        muteAudio();
+    } else {
+        unmuteAudio();
+    }
+});
