@@ -42,3 +42,6 @@ Here is an explanation step by step:
 - `cd outer_wilds_wiki/`: place the terminal in the newly created folder
 - `npm install`: install all dependencies listed in the file called "package.json"
 - `npm run watch`: starts the server only if no errors has been found
+
+Now to access the website you just have to click on the link displayed in the console, 
+or to type (or copy-paste) this link in the address bar of your web browser: http://localhost:8000/
