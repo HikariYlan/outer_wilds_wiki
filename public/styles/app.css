@@ -158,6 +158,49 @@ video {
     grid-template-columns: 1fr 1fr;
 }
 
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+    color: rgb(var(--ow_white));
+}
+
+.checkbox input {
+    display: none; /* cache la vraie case */
+}
+
+.checkbox span {
+    margin-right: 0.5em;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border: 6px solid white;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Croix orange quand coché */
+.checkbox input:checked + span::before,
+.checkbox input:checked + span::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 18px;
+    width: 4px;
+    height: 28px;
+    background: rgb(var(--ow_orange));
+}
+
+.checkbox input:checked + span::before {
+    transform: rotate(45deg);
+}
+
+.checkbox input:checked + span::after {
+    transform: rotate(-45deg);
+}
+
 @media screen and (display-mode: fullscreen) {
     #logos {
         margin: 7vw;
