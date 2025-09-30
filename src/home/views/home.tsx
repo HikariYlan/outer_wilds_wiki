@@ -25,11 +25,14 @@ export function HomeView(props: { version: string }): JSX.Element {
                     >Continuer
                     </button>
                 </dialog>
-                <video muted={true} id="background-video" />
-                <audio loop={true} id="background-audio" />
+                <video muted={true}>
+                    <source src="/videos/outer_wilds_menu_vid.mp4" id="vSource"/>
+                    <source src="/videos/outer_wilds_menu_vid_skip.mp4" id="vSourceSkip"/>
+                </video>
+                <audio loop={true} id="background-audio" src="/sounds/musics/main_menu.m4a" />
                 <audio id="buttonAudio" src="/sounds/button.wav"/>
                 <div id="logos" class="hidden transition">
-                    <img src="/images/main_logo.png" alt="logo principal"/>
+                <img src="/images/main_logo.png" alt="logo principal"/>
                     <img src="/images/main_logo_dlc.png" alt="logo DLC"/>
                 </div>
                 <section id="separator_top" class="hidden transition separator">
