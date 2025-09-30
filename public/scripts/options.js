@@ -10,5 +10,4 @@ checkbox.addEventListener('change', () => {
         localStorage.setItem('skipIntro', 'true');
         checkbox.checked = true;
     }
-    console.log(localStorage.getItem('skipIntro'));
 })

@@ -14,6 +14,12 @@ export function HomeView(props: { version: string }): JSX.Element {
                     rel="stylesheet"/>
             </head>
             <body class="josefin-sans-font">
+            <video muted={true}>
+                <source src="/videos/outer_wilds_menu_vid.mp4"/>
+            </video>
+            <audio loop={true} id="background-audio" src="/sounds/musics/main_menu.m4a"/>
+            <audio id="buttonAudio" src="/sounds/button.wav"/>
+            <audio id="labelAudio" src="/sounds/label.wav"/>
             <div id="main">
                 <dialog id="dialog" class="dialog" open>
                     <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
@@ -25,13 +31,8 @@ export function HomeView(props: { version: string }): JSX.Element {
                     >Continuer
                     </button>
                 </dialog>
-                <video muted={true}>
-                    <source src="/videos/outer_wilds_menu_vid.mp4" />
-                </video>
-                <audio loop={true} id="background-audio" src="/sounds/musics/main_menu.m4a" />
-                <audio id="buttonAudio" src="/sounds/button.wav"/>
                 <div id="logos" class="hidden transition">
-                <img src="/images/main_logo.png" alt="logo principal"/>
+                    <img src="/images/main_logo.png" alt="logo principal"/>
                     <img src="/images/main_logo_dlc.png" alt="logo DLC"/>
                 </div>
                 <section id="separator_top" class="hidden transition separator">
