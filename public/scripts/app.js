@@ -3,7 +3,6 @@ var buttons = document.querySelectorAll('button');
 var labelAudio = document.getElementById('labelAudio');
 var labels = document.querySelectorAll('label');
 
-// Ajouter un event listener sur chacun
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         buttonAudio.currentTime = 0; // remet à zéro si déjà en lecture
@@ -17,6 +16,22 @@ labels.forEach(lbl => {
         labelAudio.play();
     });
 });
+
+function fullScreen() {
+    if (document.fullscreenElement) {
+        exitFullScreen();
+    } else {
+        enterFullScreen();
+    }
+}
+
+function enterFullScreen() {
+    body.requestFullscreen();
+}
+
+function exitFullScreen() {
+    document.exitFullscreen();
+}
 
 function muteAudio() {
     document.querySelectorAll('audio').forEach(media => {
