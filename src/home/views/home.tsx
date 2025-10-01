@@ -22,12 +22,12 @@ export function HomeView(props: { version: string }): JSX.Element {
             <audio id="labelAudio" src="/sounds/label.wav"/>
             <div id="main">
                 <dialog id="dialog" class="dialog" open>
-                    <h1>Pour une meilleure expérience utilisateur, il est recommandé de passer en plein écran (touche
-                        F11)</h1>
+                    <h1>Pour une meilleure expérience utilisateur, cette page va être passée en plein écran.
+                        Vous pourrez en sortir avec le bouton "CHANGER DE PROFIL".</h1>
                     <button
                         id="close"
                         class="close_dialog"
-                        onclick="document.querySelector('dialog').remove()"
+                        onclick="document.querySelector('dialog').remove() ; fullScreen()"
                     >Continuer
                     </button>
                 </dialog>
@@ -53,7 +53,7 @@ export function HomeView(props: { version: string }): JSX.Element {
                         onclick="document.querySelector('dialog').remove()"
                     >CRÉDITS
                     </button>
-                    <button>CHANGER DE PROFIL</button>
+                    <button onclick="fullScreen()">CHANGER DE PROFIL</button>
                 </div>
                 <section id="separator_bottom" class="hidden transition separator">
                     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
