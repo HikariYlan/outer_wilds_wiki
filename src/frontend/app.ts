@@ -1,7 +1,7 @@
-var buttonAudio = document.getElementById('buttonAudio');
-var buttons = document.querySelectorAll('button');
-var labelAudio = document.getElementById('labelAudio');
-var labels = document.querySelectorAll('label');
+const buttonAudio = document.getElementById('buttonAudio') as HTMLAudioElement;
+const buttons = document.querySelectorAll('button');
+const labelAudio = document.getElementById('labelAudio') as HTMLAudioElement;
+const labels = document.querySelectorAll('label');
 
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -17,7 +17,7 @@ labels.forEach(lbl => {
     });
 });
 
-function fullScreen() {
+function fullScreen(): void {
     if (document.fullscreenElement) {
         exitFullScreen();
     } else {
@@ -25,23 +25,23 @@ function fullScreen() {
     }
 }
 
-function enterFullScreen() {
-    body.requestFullscreen();
+function enterFullScreen(): void {
+    document.body.requestFullscreen();
 }
 
-function exitFullScreen() {
+function exitFullScreen(): void {
     document.exitFullscreen();
 }
 
-function muteAudio() {
+function muteAudio(): void {
     document.querySelectorAll('audio').forEach(media => {
-        media.muted = true;
+        (media as HTMLAudioElement).muted = true;
     });
 }
 
-function unmuteAudio() {
+function unmuteAudio(): void {
     document.querySelectorAll('audio').forEach(media => {
-        media.muted = false;
+        (media as HTMLAudioElement).muted = false;
     });
 }
 

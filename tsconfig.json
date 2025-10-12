@@ -44,6 +44,8 @@
     "outDir": "./dist",
     "esModuleInterop": true,
     "verbatimModuleSyntax": false,
-    "types": [ "node" ]
-  }
+    "types": ["node"]
+  },
+  "exclude": ["src/frontend"],
+  "include": ["src/**/*"]
 }

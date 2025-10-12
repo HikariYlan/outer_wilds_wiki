@@ -1,4 +1,4 @@
-var checkbox = document.getElementById('skipIntroCheck');
+const checkbox = document.getElementById('skipIntroCheck') as HTMLInputElement;
 
 checkbox.checked = localStorage.getItem('skipIntro') === 'true';
 
@@ -10,4 +10,4 @@ checkbox.addEventListener('change', () => {
         localStorage.setItem('skipIntro', 'true');
         checkbox.checked = true;
     }
-})
+});

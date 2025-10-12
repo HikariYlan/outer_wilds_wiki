@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "npx tsc-watch --watch --onSuccess \"npm run start\"",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "build:frontend": "tsc -p tsconfig.frontend.json",
+    "watch:frontend": "tsc -p tsconfig.frontend.json --watch"
   },
   "repository": {
     "type": "git",

@@ -47,6 +47,10 @@ web_modules/
 # TypeScript cache
 *.tsbuildinfo
 
+# Compiled frontend files
+public/scripts/*.js
+!public/scripts/htmx.min.js
+
 # Optional npm cache directory
 .npm
 

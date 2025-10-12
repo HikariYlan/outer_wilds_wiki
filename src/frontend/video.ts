@@ -1,13 +1,13 @@
-const body = document.querySelector('body');
-const video = document.querySelector('video');
-const audio = document.querySelector('audio[id="background-audio"]');
-const logos = document.getElementById('logos');
-const separator_top = document.getElementById('separator_top');
-const separator_bottom = document.getElementById('separator_bottom');
-const buttonsBox = document.getElementById('buttons');
-const version = document.getElementById('version');
-const closeButton = document.getElementById("close");
-const dialog = document.querySelector("dialog");
+const body = document.querySelector('body') as HTMLBodyElement;
+const video = document.querySelector('video') as HTMLVideoElement;
+const audio = document.querySelector('audio[id="background-audio"]') as HTMLAudioElement;
+const logos = document.getElementById('logos') as HTMLElement;
+const separator_top = document.getElementById('separator_top') as HTMLElement;
+const separator_bottom = document.getElementById('separator_bottom') as HTMLElement;
+const buttonsBox = document.getElementById('buttons') as HTMLElement;
+const version = document.getElementById('version') as HTMLElement;
+const closeButton = document.getElementById("close") as HTMLButtonElement;
+const dialog = document.querySelector("dialog") as HTMLDialogElement;
 
 if (localStorage.getItem('skipIntro') === null) {
     localStorage.setItem('skipIntro', 'false');
@@ -16,7 +16,6 @@ if (localStorage.getItem('skipIntro') === null) {
 if (localStorage.getItem('skipIntro') === 'true') {
     video.currentTime = 24.5;
     audio.currentTime = 24.5;
-
 }
 
 closeButton.addEventListener("click", () => {
@@ -35,14 +34,13 @@ video.addEventListener('ended', () => {
     console.log("[OUTER WILDS WIKI] Vidéo terminée")
 });
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "e" || event.key === "E") {
         transition();
     }
 });
 
-function transition() {
-
+function transition(): void {
     body.classList.remove('nocursor');
     logos.classList.remove('hidden');
     setTimeout(() => logos.classList.add('visible'), 50);
